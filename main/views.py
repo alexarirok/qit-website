@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.conf import settings
 from django.http import HttpResponse
 from main.forms import ContactForm, ApplicationForm
 from django.core.mail import send_mail, BadHeaderError
@@ -20,12 +21,12 @@ def contact(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             subject = form.cleaned_data['subject']
-            F_name  = form.cleaned_data['F_name']
-            L_name  = form.cleaned_data['L_name']
+            First_name  = form.cleaned_data['F_name']
+            Surname  = form.cleaned_data['L_name']
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, email, ['kipkoechk38@gmail.com'])
+                send_mail(subject, message, First_name, Surname, email, ['norahmiles2@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('sucess') 
@@ -38,18 +39,18 @@ def application(request):
     else:
         form = ApplicationForm(request.POST)
         if form.is_valid():
-            course = form.cleaned_data['course']
-            F_name  = form.cleaned_data['F_name']
-            M_name  = form.cleaned_data['M_name']
-            S_name  = form.cleaned_data['S_name']
+            First_name = form.cleaned_data['F_name']
+            Middle_name  = form.cleaned_data['M_name']
+            Surname  = form.cleaned_data['S_name']
             email = form.cleaned_data['email']
             phone_num = form.cleaned_data['phone_num']
+            course = form.cleaned_data['course']
             message = form.cleaned_data['message']
             try:
-                send_mail(course, message, email, ['kipkoechk38@gmail.com'])
+                send_mail(First_name, Middle_name, Surname, email, phone_num, course, message ['norahmiles2@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
-            return redirect('success') 
+            return redirect('sucess') 
     return render(request, template, {'form':form})
 
 def services(request):
