@@ -20,6 +20,7 @@ def contact(request):
     else:
         form = ContactForm(request.POST)
         if form.is_valid():
+            form.save()
             subject = form.cleaned_data['subject']
             First_name  = form.cleaned_data['F_name']
             Surname  = form.cleaned_data['L_name']
@@ -39,6 +40,7 @@ def application(request):
     else:
         form = ApplicationForm(request.POST)
         if form.is_valid():
+            form.save()
             First_name = form.cleaned_data['F_name']
             Middle_name  = form.cleaned_data['M_name']
             Surname  = form.cleaned_data['S_name']
@@ -57,10 +59,14 @@ def services(request):
     template = 'services.html'
     return render(request, template, { })
 
+def trainings(request):
+    template = 'courses.html'
+    return render(request, template, { })
+
 def base(request):
     template = 'base.html'
     return render(request, template, { })
 
 def blog(request):
-    template = 'blog/home.html'
+    template = 'blog/index.html'
     return render(request, template, { })

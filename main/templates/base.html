@@ -103,13 +103,14 @@
                       <li><a href="#">Graduation</a></li>
                       <li><a href="#">Admissions</a></li>
                       <li><a href="#">Labs</a></li>
-                      <li><a href="#">Courses</a></li>
+                      <li><a href="{% url 'trainings' %}">Trainings</a></li>
                   </ul>
               </div>
               <div class="footer-list-29 footer-3">
                  
                   <h6 class="footer-title-29">Newsletter </h6>
-          <form action="#" class="subscribe" method="post">
+          <form action="#" class="subscribe" method="post" >
+            {% csrf_token %}
             <input type="email" name="email" placeholder="Email" required="">
             <button><span class="fa fa-envelope-o"></span></button>
           </form>
