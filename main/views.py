@@ -25,7 +25,7 @@ def contact(request):
             email = form.cleaned_data['email']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, email, ['kipkoechk38@gmail.com'])
+                send_mail(subject, F_name, L_name, message, email, ['kipkoechk38@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('sucess') 
@@ -39,14 +39,14 @@ def application(request):
         form = ApplicationForm(request.POST)
         if form.is_valid():
             course = form.cleaned_data['course']
-            F_name  = form.cleaned_data['name']
-            M_name  = form.cleaned_data['name']
-            L_name  = form.cleaned_data['name']
+            F_name  = form.cleaned_data['F_name']
+            M_name  = form.cleaned_data['M_name']
+            L_name  = form.cleaned_data['L_name']
             email = form.cleaned_data['email']
             phone_num = form.cleaned_data['phone_num']
             message = form.cleaned_data['message']
             try:
-                send_mail(subject, message, email, ['kipkoechk38@gmail.com'])
+                send_mail(course, F_name, M_name, L_name, phone_num, message, email, ['norahmiles2@gmail.com'])
             except BadHeaderError:
                 return HttpResponse('Invalid header found.')
             return redirect('sucess') 
@@ -59,4 +59,9 @@ def services(request):
 def base(request):
     template = 'base.html'
     return render(request, template, { })
-# Create your views here.
+
+
+def blog(request):
+    template = 'blog/index.html'
+    return render(request, template, { })
+

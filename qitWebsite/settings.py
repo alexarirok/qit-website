@@ -35,13 +35,22 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main',
     'accounts',
     'widget_tweaks',
+    'blog',
+    'Users',
+    'crispy_forms',
+    'whitenoise',
+    'python-decouple',
+    
     
 ]
+
+SITE_ID = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,3 +139,5 @@ if DEBUG:
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static', 'static'),
 )
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
