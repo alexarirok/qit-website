@@ -164,8 +164,8 @@
 				<div class="column1">
 					<div class="heading">
 						<h3 class="head text-white">Apply for next intake</h3>
-						<h4>September - December 2020 applications are now open</h4>
-						<p class="my-3 text-white"> Take advantage of our discounted classes for the month September.</p>
+						<h4>January 2021 applications are now open</h4>
+						<p class="my-3 text-white"> Take advantage of our discounted classes for the month January.</p>
 					  </div>
 					</div>
 					<div class="column2">
@@ -191,7 +191,8 @@
 								</div>
 								<div class="">
 									<select id="sel1">
-										<option>Category</option>
+                    <option>Category</option>
+                    <option>Advanced Computer Packages</option>
 										<option>Introduction to programming fundementals</option>
 										<option>L.A.M.P stack</option>
 										<option>M.E.R.N/M.E.A.N stack</option>
@@ -245,7 +246,7 @@
 							<div class="col-md-3 col-sm-6 col-6 mt-4">
 								<a href="{% url 'services' %}"><div class="courses-item mt-2">
 									<span class="fa fa-desktop"></span>
-									<p>Entetreneurship</p>
+									<p>Entrepreneurship</p>
 								</div></a>
 							</div>
 							<div class="col-md-3 col-sm-6 col-6 mt-4">
@@ -326,9 +327,9 @@
          <div class="item-top col-md-6 mt-md-0 mt-4">
           <div class="item text-center">
            <div class="imgTitle">
-             <img src="{% static 'images/irene.jpg' %}" class="img-responsive" alt="" style="height: 100px; width: 150px;" />
+             <img src="{% static 'images/kibet.jpg' %}" class="img-responsive" alt="" style="height: 100px; width: 150px;" />
             </div>
-            <h6 class="mt-3">Irene Wambuli</h6>
+            <h6 class="mt-3">Ruth Kibet</h6>
             <p class="">Former Student</p>
             <p> Q.I.T is the most awesome institution to learn computer and computer programming.</p>
             
@@ -361,14 +362,14 @@
                         <div class="price-box btn-layout bt6">
                             <div class="grid grid-column-2">
                                     <div class="column-6">
-                                            <img src="{% static 'images/qit5.jpg' %}" alt="" class="img-fluid">
+                                            <img src="{% static 'images/qit27.jpg' %}" alt="" class="img-fluid">
                                         </div>
                                 <div class="column1">
                                    
                                     <div class="job-info">
-                                        <h6 class="pricehead"><a href="#">November intake Starts </a></h6>
-                                        <h5>November 1<sup>st</sup>, 2020</h5>
-                                        <p>Book your space now on our portal for Nov intake</p>
+                                        <h6 class="pricehead"><a href="#">January intake Starts </a></h6>
+                                        <h5>January 3<sup>st</sup>, 2021</h5>
+                                        <p>Start of January Classes</p>
                                     </div>
                                 </div>
                                
@@ -377,14 +378,14 @@
                         <div class="price-box btn-layout bt6 top-middle-1">
                             <div class="grid grid-column-2">
                                     <div class="column-6">
-                                            <img src="{% static 'images/qit6.jpg' %}" alt="" class="img-fluid">
+                                            <img src="{% static 'images/social.jpg' %}" alt="" class="img-fluid">
                                         </div>
                                 <div class="column1">
                                    <div class="job-info">
                                         <h6 class="pricehead"><a href="#">	
-                                            About Artificial Intelligence</a></h6>
-                                       <h5>November 15<sup>th</sup>, 2020</h5>
-                                       <p>We will be having an artificial intelligence bootcamp on November 15<sup>th</sup>, 2020 at our Campus</p>
+                                            Social Media Training day</a></h6>
+                                       <h5>January 15<sup>th</sup>, 2021</h5>
+                                       <p>We will be having social media training bootcamp on January 15<sup>th</sup>, 2021 at our Campus</p>
                                     </div>
                                 </div>
                             </div>
@@ -399,7 +400,7 @@
                                     <div class="job-info">
                                         <h6 class="pricehead"><a href="#">	
                                             New Exam Schedules </a></h6>
-                                        <h5>November 20<sup>th</sup>, 2020</h5>
+                                        <h5>January 20<sup>th</sup>, 2021</h5>
                                         <p>We will be having our exams starting on 20<sup>th</sup> Nov</p>
                                     </div>
                                 </div>
@@ -417,9 +418,9 @@
                         <div class="events-top mt-md-5 mt-4">
                             <div class="events-top-left">
                                     <div class="icon-top">
-                                        <h3>20</h3>
-                                        <p>Nov</p>
-                                        <span>2020</span>
+                                        <h3>12</h3>
+                                        <p>Jan</p>
+                                        <span>2021</span>
                                     </div>
                             </div>
                             <div class="events-top-right">
@@ -434,20 +435,20 @@
                             <div class="events-top-left">
                                     <div class="icon-top">
                                         <h3>1</h3>
-                                        <p>Dec</p>
-                                        <span>2020</span>
+                                        <p>Feb</p>
+                                        <span>2021</span>
                                     </div>
                             </div>
                             <div class="events-top-right">
                                 <h6 class="pricehead"><a href="#">	
                                    Graduation ceremony </a></h6>
-                                    <p class="mb-2 mt-3">5<sup>th</sup> lot Computer packages students will be graduating on this day</p>
+                                    <p class="mb-2 mt-3">6<sup>th</sup> lot of Computer packages students will be graduating on this day</p>
                                     <li>09:00 AM - 16:00 PM </li>
                                     <li class="melb">Q.I.T campus 5<sup>th</sup> floor, Khetias Bld</li>
                             </div>
                         </div>
                         <div class="text-right mt-4">
-                          <a class="btn btn-secondary btn-theme2" href="#"> View All</a>
+                          <a class="btn btn-secondary btn-theme2" href="{% url 'blog' %}"> View All</a>
                         </div>
                       </div>
             </div>
