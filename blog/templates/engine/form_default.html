@@ -1,0 +1,17 @@
+{% extends 'engine/base.html' %}
+
+{% block content %}
+    <div id="main" role="main">
+        <div class="table-form">
+            <form method="POST" class="post-form">{% csrf_token %}
+                {{ form.as_p }}
+                <br>
+                <input type="submit" value="Submit">
+                {% if button_delete_show %}
+                    <br><a href="{% url 'post_delete' post.pk %}" style="color:red">Delete post</a>
+                {% endif %}
+                <br><br>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -2322,9 +2322,9 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
+  --blue:deepskyblue;
+  --indigo: deepskyblue;
+  --purple:deepskyblue;
   --pink: #e83e8c;
   --red: #dc3545;
   --orange: #fd7e14;
@@ -2335,7 +2335,7 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #002147;
+  --primary:deepskyblue;
   --secondary: #fdc800;
   --success: #28a745;
   --info: #17a2b8;
@@ -2371,7 +2371,7 @@ body {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: deepskyblue;
   text-align: left;
   background-color: #fff; }
 
@@ -2449,7 +2449,7 @@ sup {
   top: -.5em; }
 
 a {
-  color: #002147;
+  color: deepskyblue;
   text-decoration: none;
   background-color: transparent; }
   a:hover {
@@ -3488,7 +3488,7 @@ pre {
 .table {
   width: 100%;
   margin-bottom: 1rem;
-  color: #212529; }
+  color: deepskyblue; }
   .table th,
   .table td {
     padding: 0.75rem;
@@ -11420,7 +11420,7 @@ button.owl-next {
   text-align: center; }
 
 .w3l-form-12 .courses-item:hover {
-  background: #021a36; }
+  background: deepskyblue; }
 
 .w3l-form-12 .courses-item p {
   font-size: 16px;
@@ -11836,7 +11836,7 @@ button.owl-next {
   text-align: center; }
 
 .w3l-footer-29-main .footer-29 {
-  background: #002147;
+  background: deepskyblue;
   padding: 60px 0; }
 
 .w3l-footer-29-main .footer-top-29 {
@@ -11904,7 +11904,7 @@ button.owl-next {
   transition: 0.3s; }
 
 .w3l-footer-29-main .main-social-footer-29 a.facebook:hover {
-  background: #3b5998;
+  background: deepskyblue;
   color: #fff; }
 
 .w3l-footer-29-main .main-social-footer-29 a.twitter:hover {

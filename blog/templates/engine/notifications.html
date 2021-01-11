@@ -1,0 +1,37 @@
+{% extends 'engine/base.html' %}
+
+{% block content %}
+    <div id="main" role="main">
+        {% for notification in notifications %}
+            {% if notification.post %}
+                <p class="notification-item"
+                   id="{{ notification.pk }}"
+                   {% if notification.status == False %}onclick="notifications_viewed({{ notification.pk }})"{% endif %}
+                   {% if notification.status == True %}style="color: darkgray"{% endif %}>
+                    <a href="{% url 'user_detail' username=notification.author_subscriber.author %}">
+                        {{ notification.author_subscriber.author|title }}
+                    </a>
+                    added post
+                    <a href="{% url "post_detail" name=notification.post.url %}">{{ notification.post.name|truncatechars:64|title }}</a>
+                    {{ notification.post.created_date|timesince }} ago
+                    <a href="" style="float:right" onclick="notification_delete({{ notification.pk }});return false;">X</a>
+                </p>
+            {% endif %}
+            {% if notification.comment %}
+                <p class="notification-item"
+                   id="{{ notification.pk }}"
+                   {% if notification.status == False %}onclick="notifications_viewed({{ notification.pk }})"{% endif %}
+                   {% if notification.status == True %}style="color: darkgray"{% endif %}>
+                    <a href="{% url 'user_detail' username=notification.comment.author %}">
+                        {{ notification.comment.author|title }}
+                    </a>
+                    added comment "{{ notification.comment.text|truncatechars:50 }}" to
+                    <a href="{% url "post_detail" name=notification.comment.post.url %}">{{ notification.comment.post.name }}</a>
+                    {{ notification.comment.created_date|timesince }} ago
+                    <a href="" style="float:right" onclick="notification_delete({{ notification.pk }});return false;">X</a>
+                </p>
+            {% endif %}
+        {% endfor %}
+    <br><br><br><br>
+    </div>
+{% endblock %}
