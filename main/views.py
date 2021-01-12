@@ -62,6 +62,6 @@ def base(request):
 
 
 def blog(request):
-    template = 'engine/index.html'
+    template = 'blog/index.html'
     return render(request, template, { })
 

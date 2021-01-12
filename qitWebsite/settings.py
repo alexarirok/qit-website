@@ -30,7 +30,7 @@ SESSION_COOKIE_SECURE = config('SESSION_COOKIE_SECURE', default=True, cast=bool)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', 'cPanel', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS','https://qit-website.herokuapp.com/', cast=Csv())
 
 
 # Application definition
@@ -82,7 +82,7 @@ ROOT_URLCONF = 'qitWebsite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIRS],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -162,5 +162,9 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static', 'static'),
 )
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+LOGIN_REDIRECT_URL = ''
+LOGIN_URL = 'login'
 # STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
